@@ -1,9 +1,17 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import { Provider } from 'react-redux';
+import { store } from './kawaii/store';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App ', () => {
+  test('renders App without crash ', () => {
+    const appComonent = render(<Provider store={store}>
+      <App />
+    </Provider>)
+    expect(appComonent.getByTestId('app')).toBeInTheDocument();
+  });
+
+  afterEach(() => jest.clearAllMocks())
+})
+
+
