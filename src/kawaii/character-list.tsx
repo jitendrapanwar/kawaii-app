@@ -14,7 +14,7 @@ const CharacterList = () => {
   return (
     <>
       <h3>Choose Character</h3>
-      <section>
+      <section id='characters'>
         {Object.values(characters).map(illustration => (
           <button
             data-type={illustration}

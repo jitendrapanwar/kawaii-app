@@ -16,7 +16,7 @@ const MoodList = () => {
   return (
     <>
       <h3>my mood is: {currentMood}</h3>
-      <section>
+      <section id="moods">
         { Object.values(MOODS).map(mood => (
           <button
             data-testid={mood}

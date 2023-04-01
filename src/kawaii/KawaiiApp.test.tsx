@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import KawaiiApp from './KawaiiApp';
 import {  useAppDispatch, useAppSelector } from './kawaii-hooks';
-import { testAppSelector } from './app-selector';
+//import { testAppSelector } from './app-selector';
 import { store } from './store';
 import { updateMood, updateIllstration } from './kawaii-reducer';
 
@@ -10,7 +10,7 @@ jest.mock('./kawaii-hooks')
 describe('App ', () => {
   
   beforeEach(() => {
-    useAppSelector(testAppSelector)    
+   // useAppSelector(testAppSelector)    
   })
   
   test('renders cat svg componet ', () => {
