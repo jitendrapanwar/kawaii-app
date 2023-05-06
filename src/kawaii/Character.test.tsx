@@ -72,7 +72,7 @@ describe('Character ', () => {
     const h3 = component.getByTestId('character-wrapper');
     fireEvent.mouseOver(h3);
     expect(h3).toBeInTheDocument();
-    expect(h3.textContent).toBe('cat is sad')
+    expect(h3.textContent).toBe('I am cat')
   });
 
 
