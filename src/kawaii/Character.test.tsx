@@ -1,6 +1,7 @@
 import Character from './Character';
 import { render } from './test.util';
 import { CharacterType } from './moods';
+import { fireEvent, screen } from '@testing-library/react';
 
 describe('Character ', () => {
 
@@ -65,6 +66,15 @@ describe('Character ', () => {
     const component = setupCharacter('speechbubble')
     expect(component).toBeTruthy()
   })
+
+  test('show what is the mood of character on hover event', () => {
+    const component = setupCharacter('cat')
+    const h3 = component.getByTestId('character-wrapper');
+    fireEvent.mouseOver(h3);
+    expect(h3).toBeInTheDocument();
+    expect(h3.textContent).toBe('cat is sad')
+  });
+
 
 
   afterEach(() => jest.clearAllMocks())

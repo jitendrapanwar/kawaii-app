@@ -7,7 +7,7 @@ import { updateMood, updateIllstration } from './kawaii-reducer';
 
 jest.mock('./kawaii-hooks')
 
-describe('App ', () => {
+describe('KawaiiApp ', () => {
   
   beforeEach(() => {
    // useAppSelector(testAppSelector)    

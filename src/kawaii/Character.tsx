@@ -63,7 +63,14 @@ const Character = () => {
     return component;
   }
 
-  return (<RenderCharacter />)
+  return (
+    <div className="character-wrapper" data-testid="character-wrapper">
+    <div className="character-card"/>
+      <RenderCharacter />
+      <div className="card-details">
+        <h3>{`${currentCharacter} is ${currentMood}`}</h3>
+      </div>
+    </div>)
 
 }
 export default Character;

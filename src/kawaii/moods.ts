@@ -1,11 +1,11 @@
-export const MOODS = {
-  SAD: 'sad',
-  SHOCKED: 'shocked',
-  HAPPY: 'happy',
-  BLISSFUL: 'blissful',
-  LOVESTRUCK: 'lovestruck',
-  EXCITED: 'excited',
-  KO: 'ko'
+export enum MOODS  {
+  SAD = 'sad',
+  SHOCKED = 'shocked',
+  HAPPY = 'happy',
+  BLISSFUL = 'blissful',
+  LOVESTRUCK = 'lovestruck',
+  EXCITED = 'excited',
+  KO = 'ko'
 }
 
 export const characters = {

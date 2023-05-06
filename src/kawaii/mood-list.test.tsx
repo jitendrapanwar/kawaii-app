@@ -10,7 +10,7 @@ describe('App ', () => {
     </Provider>)
   })
 
-  test('check button click update ', () => {
+  test('check default character mood', () => {
     const h3 = screen.getByRole('heading');
     expect(h3).toBeInTheDocument();
     expect(h3.textContent).toBe('my mood is: sad')
